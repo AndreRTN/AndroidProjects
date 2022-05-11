@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_menu"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:background="@color/background_coffe"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:minWidth="32dp"
+        android:minHeight="32dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:tint="#fff"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capuccino"
+        android:textColor="#fff"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="@id/view_menu"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:minWidth="60dp"
+        android:minHeight="60dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:src="@drawable/ic_clock"
+
+        app:layout_constraintTop_toBottomOf="@id/view_menu"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/favorite"
+        app:tint="@color/background_coffe" />
+
+
+    <ImageView
+        android:id="@+id/favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minWidth="60dp"
+        android:minHeight="60dp"
+
+        android:src="@drawable/ic_baseline_favorite_24"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_menu"
+        app:layout_constraintLeft_toRightOf="@id/clock"
+        app:tint="@color/background_coffe" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_details_night">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:paddingBottom="50dp">
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:text="Canaberra"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Canaberra" />
+
+        <ImageView
+            android:id="@+id/back_to_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27.5dp"
+            android:contentDescription="Arrow Back Home"
+            android:src="@drawable/ic_backarrowhome"
+            app:layout_constraintBottom_toBottomOf="@id/tv_city"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_city" />
+
+
+        <ToggleButton
+            android:id="@+id/toggle_favorite"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_marginEnd="27.5dp"
+            android:background="@android:drawable/btn_star"
+            android:focusable="false"
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintBottom_toBottomOf="@id/tv_city"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_city" />
+
+        <TextView
+            android:id="@+id/tv_weather_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Cloudy"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_city"
+            tools:text="Cloudy" />
+
+        <TextView
+            android:id="@+id/tv_weather_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="12° C"
+            android:textColor="@color/white"
+            android:textSize="70sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_weather_type"
+            tools:text="12° C" />
+
+
+        <ImageView
+            android:id="@+id/iv_weather_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/app_name"
+            android:minWidth="70dp"
+            android:minHeight="70dp"
+            android:src="@drawable/ic_night"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toEndOf="@id/tv_weather_temp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_weather_temp"
+            tools:src="@drawable/ic_night" />
+
+        <TextView
+            android:id="@+id/tv_weather_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:text="Tuesday | 12 Dec 2020"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/iv_dropdown_expand"
+            app:layout_constraintEnd_toEndOf="@id/iv_weather_icon"
+            app:layout_constraintStart_toStartOf="@id/tv_weather_temp"
+            app:layout_constraintTop_toBottomOf="@id/tv_weather_temp"
+            tools:text="Tuesday | 12 Dec 2020" />
+
+        <LinearLayout
+            android:id="@+id/iv_dropdown_expand"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/circle_background"
+            android:elevation="4dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@id/cv_upcoming"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cv_upcoming">
+
+            <ImageView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_background"
+                android:contentDescription="@string/app_name"
+
+                android:src="@drawable/ic_arrow_up" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_upcoming"
+            android:layout_width="wrap_content"
+
+            android:layout_height="285dp"
+            android:layout_marginTop="20dp"
+            android:elevation="0dp"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_weather_date">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_background"
+                android:contentDescription="@string/app_name"
+
+                android:src="@drawable/ic_arrow_up" />
+
+            <RelativeLayout
+                android:id="@+id/rv_upcoming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_night_details"
+                android:orientation="vertical"
+
+                android:paddingHorizontal="0dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/tv_upcoming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:paddingTop="30dp"
+                    android:text="Upcoming"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_upcoming"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="90dp"
+                        android:layout_height="150dp"
+                        android:layout_below="@id/tv_upcoming"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/rounded_border_bg"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/upcoming_first_temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="#001332"
+                            android:textSize="15sp"
+                            tools:text="32° C" />
+
+                        <ImageView
+                            android:id="@+id/upcoming_first_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:src="@drawable/ic_sun_upcoming" />
+
+                        <TextView
+                            android:id="@+id/upcoming_first_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="#001332"
+                            android:textSize="18sp"
+                            tools:text="Wed" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="90dp"
+                        android:layout_height="150dp"
+                        android:layout_below="@id/tv_upcoming"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/rounded_border_bg"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/upcoming_second_temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="#001332"
+                            android:textSize="15sp"
+                            tools:text="32° C" />
+
+                        <ImageView
+                            android:id="@+id/upcoming_second_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:src="@drawable/ic_weather_upcoming" />
+
+                        <TextView
+                            android:id="@+id/upcoming_second_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="#001332"
+                            android:textSize="18sp"
+                            tools:text="Wed" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="90dp"
+                        android:layout_height="150dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:background="@drawable/rounded_border_bg"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/upcoming_third_temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="#001332"
+                            android:textSize="15sp"
+                            tools:text="32° C" />
+
+                        <ImageView
+                            android:id="@+id/upcoming_third_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:src="@drawable/ic_wind_upcoming" />
+
+                        <TextView
+                            android:id="@+id/upcoming_third_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="#001332"
+                            android:textSize="18sp"
+                            tools:text="Wed" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

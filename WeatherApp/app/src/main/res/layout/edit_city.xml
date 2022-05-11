@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <LinearLayout
+            android:background="@drawable/rounded_border_bg"
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:layout_height="188dp">
+
+            <ImageView
+                android:layout_weight="1"
+                android:src="@drawable/ic_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:elevation="0dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/white"
+                android:text="Add New City"
+                android:foregroundTint="@color/white"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+
+</LinearLayout>

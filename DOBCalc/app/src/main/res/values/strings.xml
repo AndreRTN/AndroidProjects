@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DOBCalc</string>
+    <string name="calculate_your">CALCULATE YOUR</string>
+    <string name="age">AGE</string>
+    <string name="in_minutes">IN MINUTES</string>
+    <string name="selected_date">Selected Date</string>
+
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">IfoodUI</string>
+    <string name="restaurants">Restaurantes</string>
+    <string name="marketplace">Mercados</string>
+    <string name="drinks">Bebidas</string>
+    <string name="r_rua_abc">R. Rua ABC</string>
+    <string name="qr_code">Qr Code</string>
+    <string name="dotted">&#8226;</string>
+    <string name="shop_category">\u2022 %1$s \u2022 %2$.1f km</string>
+    <string name="shop_price">%1$s min \u2022 R$ %2$.2f</string>
+
+</resources>

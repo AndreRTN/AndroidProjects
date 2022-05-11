@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate_your"
+        android:textColor="@color/text_color"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@color/text_color"
+        android:padding="10dp"
+        android:text="@string/age"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_2"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/in_minutes"
+
+        android:padding="10dp"
+        android:textColor="@color/text_color"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        />
+
+    <Button
+        android:id="@+id/btn_select_date"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/tv_3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="20dp"
+        android:backgroundTint="@color/white"
+
+        android:hint="SELECT DATE"
+        android:textColorHint="@color/text_color"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_select_date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textSize="25sp"
+        tools:text="31.05.1998" />
+
+    <TextView
+        android:id="@+id/tv_age"
+        style="@style/Base.CardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/selected_date"
+        android:textColor="@color/lg_grey"
+        android:textSize="25sp" />
+
+
+    <TextView
+        android:id="@+id/tv_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_age"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/text_color"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        tools:text="14000000" />
+
+
+    <TextView
+        android:id="@+id/tv_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/lg_grey"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="@string/selected_date" />
+
+</RelativeLayout>
